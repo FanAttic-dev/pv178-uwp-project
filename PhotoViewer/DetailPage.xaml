@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="PhotoViewer.DetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PhotoViewer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    RequestedTheme="Dark">
+
+    <RelativePanel>
+        <Button x:Name="BackButton"
+                Style="{StaticResource NavigationBackButtonNormalStyle}"
+                VerticalAlignment="Top"
+                Click="{x:Bind BackButton_OnClick}"/>
+
+        <CommandBar x:Name="DetailCommandBar"
+                    RelativePanel.AlignRightWithPanel="True"
+                    DefaultLabelPosition="Right">
+            <AppBarButton Label="Set as wallpaper"
+                          Click="{x:Bind SetAsWallpaperAsync}">
+                <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE771;"/>
+            </AppBarButton>
+            <AppBarButton Label="Set as lock screen"
+                          Click="{x:Bind SetAsLockScreenAsync}">
+                <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE771;"/>
+            </AppBarButton>
+        </CommandBar>
+        
+        <Grid RelativePanel.Below="DetailCommandBar"
+              RelativePanel.AlignLeftWithPanel="True"
+              RelativePanel.AlignRightWithPanel="True"
+              RelativePanel.AlignBottomWithPanel="True">
+            <Image x:Name="targetImage"/>
+        </Grid>
+    </RelativePanel>
+</Page>

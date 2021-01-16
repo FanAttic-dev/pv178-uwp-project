@@ -1,0 +1,89 @@
+﻿<Page
+    x:Name="mainPage"
+    x:Class="PhotoViewer.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PhotoViewer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    NavigationCacheMode="Enabled"
+    SizeChanged="{x:Bind DetermineBingImageSize}"
+    >
+    <Page.Resources>
+        <DataTemplate x:Key="MyFolderGridView_DefaultItemTemplate"
+                      x:DataType="local:ImageFileInfo">
+            <Grid Height="Auto"
+                  Width="{Binding Value, ElementName=ZoomSlider}"
+                  Margin="8">
+                <Image x:Name="ItemImage"
+                       Source="{x:Bind ImageSource}"
+                       Stretch="Uniform"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="BingGridView_DefaultItemTemplate"
+                      x:DataType="local:ImageFileInfo">
+            <Grid Height="Auto"
+                  Width="{Binding ImgWidth, ElementName=mainPage}"
+                  Margin="8">
+                <Image x:Name="ItemImage"
+                       Source="{x:Bind ImageSource}"
+                       Stretch="Uniform"/>
+            </Grid>
+        </DataTemplate>
+        <ItemsPanelTemplate x:Key="GridView_ItemsPanelTemplate">
+            <ItemsWrapGrid Orientation="Horizontal"
+                           HorizontalAlignment="Center"/>
+        </ItemsPanelTemplate>
+    </Page.Resources>
+
+    <RelativePanel>
+        <Pivot SelectionChanged="{x:Bind ToggleCmdBarVisibility}">
+            <PivotItem Header="My photos">
+                <GridView x:Name="MyPhotosGridView" 
+                          ItemsPanel="{StaticResource GridView_ItemsPanelTemplate}" 
+                          ItemTemplate="{StaticResource MyFolderGridView_DefaultItemTemplate}" 
+                          ItemsSource="{x:Bind FolderImages}"
+                          Margin="0,0,0,8"
+                          IsItemClickEnabled="True"
+                          ItemClick="MyPhotosGridView_OnItemClick">
+                </GridView>
+            </PivotItem>
+            <PivotItem Header="Bing">
+                <GridView ItemsPanel="{StaticResource GridView_ItemsPanelTemplate}" 
+                          ItemTemplate="{StaticResource BingGridView_DefaultItemTemplate}"
+                          ItemsSource="{x:Bind BingImages}"
+                          Margin="0,0,0,8"
+                          IsItemClickEnabled="True"
+                          ItemClick="MyPhotosGridView_OnItemClick">
+                </GridView>
+            </PivotItem>
+        </Pivot>
+        <CommandBar x:Name="MainCommandBar" 
+                    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                    RelativePanel.AlignRightWithPanel="True"
+                    DefaultLabelPosition="Right">
+            <AppBarButton Icon="Zoom" 
+                          Label="Grid view size">
+                <AppBarButton.Flyout>
+                    <Flyout>
+                        <Slider x:Name="ZoomSlider"
+                                Minimum="180"
+                                Maximum="540"
+                                Value="350"
+                                Margin="0,5,0,0"
+                                TickFrequency="40"
+                                SnapsTo="StepValues"
+                                Header="Grid item size">
+                        </Slider>
+                    </Flyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+            <AppBarButton Icon="NewFolder" 
+                          Label="Change folder"
+                          Click="{x:Bind ChangeFolder}">
+            </AppBarButton>
+        </CommandBar>
+    </RelativePanel>
+</Page>
