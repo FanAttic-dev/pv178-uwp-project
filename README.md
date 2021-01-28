@@ -2,9 +2,9 @@
 
 **PhotoViewer is a UWP application for viewing images from a local folder and the Bing images of the day.**
 
-![home](.\Screenshots\home.JPG)
+![home](./Screenshots/home.JPG)
 
-![detail](.\Screenshots\detail.JPG)
+![detail](./Screenshots/detail.JPG)
 
 ## Instructions
 
