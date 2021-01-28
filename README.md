@@ -1,6 +1,12 @@
 # PV178 Project - PhotoViewer
 
-PhotoViewer is a UWP application for viewing images from a local folder and the Bing images of the day.
+**PhotoViewer is a UWP application for viewing images from a local folder and the Bing images of the day.**
+
+![home](.\Screenshots\home.JPG)
+
+![detail](.\Screenshots\detail.JPG)
+
+## Instructions
 
 **IMPORTANT:** Before building the solution, make sure the Solution Platform is set to x86 or x64, not ARM.
 
@@ -12,4 +18,3 @@ and set one as your wallpaper ;)
 Note: There are 8 Bing images because the web XML does not provide more.
 
 *Author: Attila Zsíros*
-*Date: June 2019*

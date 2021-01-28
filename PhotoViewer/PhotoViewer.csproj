@@ -11,8 +11,8 @@
     <AssemblyName>PhotoViewer</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17763.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.18362.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -147,28 +147,6 @@
     <Content Include="Assets\Images\Al-Ayn, Oman 1920x1080.jpg" />
     <Content Include="Assets\Images\Alberta, Canada 1920x1080.jpg" />
     <Content Include="Assets\Images\Amboseli NP, Kenya 1920x1080.jpg" />
-    <Content Include="Assets\Images\Amer, India 1920x1080.jpg" />
-    <Content Include="Assets\Images\American bison 1920x1080.jpg" />
-    <Content Include="Assets\Images\Amorgos island, Greece 1920x1080.jpg" />
-    <Content Include="Assets\Images\Andalusia, Spain 1920x1080.jpg" />
-    <Content Include="Assets\Images\Andean flamingos 1920x1080.jpg" />
-    <Content Include="Assets\Images\Andros Island, Greece 1920x1080.jpg" />
-    <Content Include="Assets\Images\Angkor, Cambodia 1920x1080.jpg" />
-    <Content Include="Assets\Images\Antarctic Peninsula 1920x1080.jpg" />
-    <Content Include="Assets\Images\Antarctica 1920x1080.jpg" />
-    <Content Include="Assets\Images\Aphrodite%27s Rock, Cyprus 1920x1080.jpg" />
-    <Content Include="Assets\Images\Apostle Islands, WI 1920x1080.jpg" />
-    <Content Include="Assets\Images\Arizona 1920x1080.jpg" />
-    <Content Include="Assets\Images\Ashland, Delaware 1920x1080.jpg" />
-    <Content Include="Assets\Images\Athabasca Glacier 1920x1080.jpg" />
-    <Content Include="Assets\Images\Auckland, New Zealand 1920x1080.jpg" />
-    <Content Include="Assets\Images\Aupouri Peninsula, New Zealand 1920x1080.jpg" />
-    <Content Include="Assets\Images\Aurora, Canada 1920x1080.jpg" />
-    <Content Include="Assets\Images\Austin, Texas 1920x1080.jpg" />
-    <Content Include="Assets\Images\Australian pelican 1920x1080.jpg" />
-    <Content Include="Assets\Images\Avenue of the Giants, CA 1920x1080.jpg" />
-    <Content Include="Assets\Images\Azadi Tower, Iran 1920x1080.jpg" />
-    <Content Include="Assets\Images\Bac Son, Vietnam 1920x1080.jpg" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
